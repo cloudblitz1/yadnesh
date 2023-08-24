@@ -1,7 +1,7 @@
 FROM centos:7
 RUN yum install epel-release -y
 RUN yum install java-openjdk -y
-ADD https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.92.tar.gz /opt/
+ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.92/bin/apache-tomcat-8.5.92.tar.gz /opt/
 WORKDIR /opt
 RUN tar -xzf apache-tomcat-8.5.92.tar.gz
 WORKDIR /opt/apache-tomcat-8.5.92

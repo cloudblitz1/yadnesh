@@ -1,12 +1,11 @@
 FROM centos:7
 RUN yum -y update
-RUN yum install -y \
-  java-1.8.0-openjdk \
-  java-1.8.0-openjdk-devel \
-  epel-release \
-  curl \
+RUN yum install -y && \
+  java-1.8.0-openjdk && \
+  java-1.8.0-openjdk-devel && \
+  epel-release && \
+  curl && \
   unzip
-
 RUN curl -O https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.92.tar.gz /opt
 WORKDIR /opt
 RUN tar -xvf apache-tomcat-8.5.92.tar.gz

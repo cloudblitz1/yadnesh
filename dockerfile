@@ -30,6 +30,7 @@ RUN CREATE TABLE if not exists students(student_id INT NOT NULL AUTO_INCREMENT,
 );
 RUN exit;
 EXPOSE 8080
+EXPOSE 3306
 RUN ./bin/catalina.sh run
 
 
